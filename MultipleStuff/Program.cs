@@ -8,7 +8,11 @@ namespace MultipleStuff
     {
         private static void Main(string[] args)
         {
-            SuperList sprList = new SuperList(new List<double>() { 1, 2, 3, 4, 5, 6 });
+            List<double> list = new List<double>() { 1, 2, 3, 4, 5, 6 };
+
+            SuperList sprList = new SuperList();
+
+            sprList.AddRange(list);
 
             // Versão 1
 
