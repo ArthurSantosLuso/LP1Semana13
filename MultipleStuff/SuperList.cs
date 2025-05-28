@@ -32,7 +32,7 @@ namespace MultipleStuff
             return Tuple.Create(Lista.Min(), Lista.Max());
         }
 
-        public (double min, double max) GetMinMax4()
+        public (double Min, double Max) GetMinMax4()
         {
             return (Lista.Min(), Lista.Max());
         }

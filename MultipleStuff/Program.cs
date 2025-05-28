@@ -33,9 +33,9 @@ namespace MultipleStuff
 
             // Versão 4
 
-            (double, double) tupleValueMinMax = sprList.GetMinMax4();
+            (double Min, double Max) tupleValueMinMax = sprList.GetMinMax4();
 
-            Console.WriteLine($"Versão 4: Min: {tupleValueMinMax.Item1} Max: {tupleValueMinMax.Item2}");
+            Console.WriteLine($"Versão 4: Min: {tupleValueMinMax.Min} Max: {tupleValueMinMax.Max}");
         }
     }
 }
