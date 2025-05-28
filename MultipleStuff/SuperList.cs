@@ -14,5 +14,10 @@ namespace MultipleStuff
             min = list.Min();
             max = list.Max();
         }
+
+        private static Tuple<double, double> GetMinMax3(List<double> list)
+        {
+            return Tuple.Create(list.Min(), list.Max());
+        }
     }
 }
