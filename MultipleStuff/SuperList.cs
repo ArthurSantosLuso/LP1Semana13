@@ -9,25 +9,32 @@ namespace MultipleStuff
 {
     class SuperList : List<Double>
     {
-        public void GetMinMax1(List<double> list, out double min, out double max)
+        public List<double> Lista { get; }
+
+        public SuperList(List<double> list)
         {
-            min = list.Min();
-            max = list.Max();
+            Lista = list;
         }
 
-        public static MinMaxStruct GetMinMax2(List<double> list)
+        public void GetMinMax1(out double min, out double max)
         {
-            return new MinMaxStruct(list.Min(), list.Max());
+            min = Lista.Min();
+            max = Lista.Max();
         }
 
-        public static Tuple<double, double> GetMinMax3(List<double> list)
+        public MinMaxStruct GetMinMax2()
         {
-            return Tuple.Create(list.Min(), list.Max());
+            return new MinMaxStruct(Lista.Min(), Lista.Max());
         }
 
-        public static (double min, double max) GetMinMax4(List<double> list)
+        public Tuple<double, double> GetMinMax3()
         {
-            return (list.Min(), list.Max());
+            return Tuple.Create(Lista.Min(), Lista.Max());
+        }
+
+        public (double min, double max) GetMinMax4()
+        {
+            return (Lista.Min(), Lista.Max());
         }
 
     }
