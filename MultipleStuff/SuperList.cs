@@ -15,6 +15,11 @@ namespace MultipleStuff
             max = list.Max();
         }
 
+        private static MinMaxStruct GetMinMax2(List<double> list)
+        {
+            return new MinMaxStruct(list.Min(), list.Max());
+        }
+
         private static Tuple<double, double> GetMinMax3(List<double> list)
         {
             return Tuple.Create(list.Min(), list.Max());
@@ -25,5 +30,17 @@ namespace MultipleStuff
             return (list.Min(), list.Max());
         }
 
+    }
+
+    struct MinMaxStruct
+    {
+        public double Max { get; }
+        public double Min { get; }
+
+        public MinMaxStruct(double min, double max)
+        {
+            Min = min;
+            Max = max;
+        }
     }
 }
