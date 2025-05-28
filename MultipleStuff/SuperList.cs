@@ -19,5 +19,11 @@ namespace MultipleStuff
         {
             return Tuple.Create(list.Min(), list.Max());
         }
+
+        private static (double min, double max) GetMinMax4(List<double> list)
+        {
+            return (list.Min(), list.Max());
+        }
+
     }
 }
